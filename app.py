@@ -1,5 +1,6 @@
 import streamlit as st
-from transformers import Conversation, ConversationPipeline
+from transformers.pipelines import ConversationPipeline
+
 
 # Initialize the conversation pipeline
 pipe = ConversationPipeline("microsoft/DialoGPT-medium")
