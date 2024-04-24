@@ -1,9 +1,10 @@
 import streamlit as st
-from transformers.pipelines import ConversationPipeline
+from transformers import Conversation, pipeline
 
+conversation_pipeline = pipeline("conversational")
 
 # Initialize the conversation pipeline
-pipe = ConversationPipeline("microsoft/DialoGPT-medium")
+pipe = conversation_pipeline("microsoft/DialoGPT-medium")
 
 def generate_activity_plan(days):
     if days == 1:
